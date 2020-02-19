@@ -1,17 +1,14 @@
 #include <stdio.h>
 
+int num;
+
 int main (void){
-    int A;
-    char nome [11];
 
-    printf("Qual o seu nome? \n");
-    scanf(" %s", nome);
+    printf("O programa vai aparecer de 20 - 0\n");
 
-    for (A = 0; A <= 3; A++)
+    for (num = 20; num >= 0; num--)
     {
-        printf(" %c", nome[A]);
-        printf("\n \n");
+        printf(" O numero e: %d\n",num);
     }
-    getchar();
-    return(0);
+    
 }

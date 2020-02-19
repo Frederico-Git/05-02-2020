@@ -1,23 +1,19 @@
 #include <stdio.h>
 
+int caixa [10];
+int media = 0;
+int x;
+
 int main (void){
-    char nome [30];
-    int x = 1;
 
-    printf("Qual o seu nome? \n");
-    scanf(" %s",nome);
+    printf("O programa vai fazer a media de 10 caixas \n");
 
-    while (x < 10)
+    for ( x = 0; x < 10; x++)
     {
-        x = x + 1;
-        printf(" %s",nome[x]);
+        caixa[x] = 10;
+        printf("A media das caixas sao: %d\n",caixa[x]);
+        media = (media + caixa[x]) / 10;
     }
-    printf ("\n");
-
-    printf("Nome digitado: %d", nome[x]);
-
-    printf(" \n \n");
+    printf("A media e de: %d\n",media);
     
-    getchar();
-    return(0);
 }

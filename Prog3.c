@@ -1,30 +1,22 @@
 #include <stdio.h>
 
+int soma = 0;
+int caixa [10];
+int x;
+
 int main (void){
 
-    int pp=1,tam,x;
-    char APELIDO[100];
+    printf("10 Array e calulcar a soma e apresentar o resultado \n");
+    srand( time(0));
 
-    printf ("Informe um apelido:");
-    scanf(" %s",APELIDO);
-
-    tam = strlen (APELIDO);
-    printf("O tamanho do nome e: %d \n", tam);
-    printf("\n As letras na posicao impar sao: ",x);
-
-    while(pp<=tam-1)
+    for (x = 0; x < 10 ; x++)
     {
-    printf(" %c ",APELIDO[pp]);
-    pp=pp+2;
+        caixa[x] = rand() %10;
+        printf("O numero das caixas sao: %d\n",caixa[x]);
+        soma = soma + caixa[x];
+        //printf("Quais sao os valores para as 10 caixas? \n");
+        //scanf(" %d", &caixa[x]);
     }
-
-printf ("\n");
-
-printf("\n\tNome digitado: %s\t",APELIDO);
-
-printf ("\n\n");
-
-return 0;   
-
     
+    printf("A soma e: %d\n",soma);
 }
